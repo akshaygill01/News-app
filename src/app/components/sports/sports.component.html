@@ -1,0 +1,27 @@
+<h1 class="mb-4 mt-4">Sports Headlines !</h1>
+<div class="container-fluid">
+    <div class="d-flex gap-4 flex-wrap">
+      <div
+        *ngFor="let data of sportsData"
+        class="card mb-3 p-2"
+        style="max-width: 340px"
+      >
+        <img
+          src="{{ data.urlToImage }}"
+          class="img-fluid rounded-start mb-2"
+          alt="..."
+        />
+  
+        <h5 class="card-title">{{ data.title }}</h5>
+        <p class="card-text">{{ data.description }}</p>
+        <div >
+          <a class="nav-link readmore" target="_blank" href={{data.url}}>Read More...</a>
+          <p class="text-muted">{{ data.source.name }}</p>
+          
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  
